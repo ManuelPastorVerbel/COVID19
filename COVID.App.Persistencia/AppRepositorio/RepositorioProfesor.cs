@@ -6,6 +6,7 @@ namespace COVID.App.Persistencia
 {
     public class RepositorioProfesor : IRepositorioProfesor
     {
+        
         private readonly AppContext _appContext;
 
         public RepositorioProfesor(AppContext appContext)

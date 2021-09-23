@@ -11,6 +11,7 @@ namespace COVID.App.Consola
     class Program
     {
        private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
+       private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
         static void Main(string[] args)
 
         {
@@ -43,7 +44,7 @@ namespace COVID.App.Consola
                         string apellido=Console.ReadLine();
                         Console.WriteLine("edad :");
                         int edad=Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("estado :");
+                        
                         
                         Console.WriteLine("departamento :");
                         string departamento=Console.ReadLine();
@@ -68,7 +69,26 @@ namespace COVID.App.Consola
                         break;
 
                     case 2:
-                        Console.WriteLine("Ud seleccionó la opción Eliminar");
+                        Console.WriteLine("nombre :");
+                        string nombreEstudiante=Console.ReadLine();
+                        Console.WriteLine("apellido :");
+                        string apellidoEstudiante=Console.ReadLine();
+                        Console.WriteLine("edad :");
+                        int edadEstudiante=Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("carrera :");
+                        string carrera=Console.ReadLine();
+                        Console.WriteLine("semestre :");
+                        int semestre=Convert.ToInt32(Console.ReadLine());
+                        var estudiante =new Estudiante()
+                        {
+                            nombre=nombreEstudiante,
+                            apellido=apellidoEstudiante,
+                            edad=edadEstudiante,
+                            estado=Estado.negativo,
+                            carrera=carrera,
+                            semestre=semestre
+                        };
+                        _repoEstudiante.AddEstudiante(estudiante);                                            
                         Console.Write("Presione una tecla para continuar...");
                         Console.ReadKey();
                         break;
