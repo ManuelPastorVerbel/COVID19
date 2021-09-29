@@ -64,5 +64,12 @@ namespace COVID.App.Persistencia
         {
             return _appContext.Profesores;
         }
+         IQueryable<Profesor> IRepositorioProfesor.GetProfesorDetalle(int idProfesor)
+        {
+            IQueryable<Profesor> profesores = _appContext.Profesores.Where(p => p.id == idProfesor);
+            var profesorEncontrado= profesores;
+            return profesorEncontrado;
+        }
+       
     }
 }

@@ -53,7 +53,6 @@ C:\COVID19\COVID.App\COVID.App.FrontEnd\bin\Debug\netcoreapp3.1\COVID.App.Domini
 C:\COVID19\COVID.App\COVID.App.FrontEnd\bin\Debug\netcoreapp3.1\COVID.App.Persistencia.dll
 C:\COVID19\COVID.App\COVID.App.FrontEnd\bin\Debug\netcoreapp3.1\COVID.App.Dominio.pdb
 C:\COVID19\COVID.App\COVID.App.FrontEnd\bin\Debug\netcoreapp3.1\COVID.App.Persistencia.pdb
-C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.csprojAssemblyReference.cache
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.MvcApplicationPartsAssemblyInfo.cache
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.RazorAssemblyInfo.cache
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.RazorAssemblyInfo.cs
@@ -64,6 +63,7 @@ C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontE
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.RazorCoreGenerate.cache
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\List.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -77,3 +77,6 @@ C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\staticwebassets\
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\staticwebassets\COVID.App.FrontEnd.StaticWebAssets.xml
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.dll
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.pdb
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\COVID.App.FrontEnd.csprojAssemblyReference.cache
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Detalle.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Estudiantes.cshtml.g.cs

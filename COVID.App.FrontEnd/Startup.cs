@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using COVID.App.Persistencia;
+using COVID.App.Dominio;
 
 namespace COVID.App.FrontEnd
 {

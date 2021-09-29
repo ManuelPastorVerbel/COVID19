@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using COVID.App.Dominio;
+using System.Linq;
 
 namespace COVID.App.Persistencia 
 {
@@ -8,6 +9,8 @@ namespace COVID.App.Persistencia
          //GetAllProfesores
         
         IEnumerable<Profesor> GetAllProfesores();
+        /// detalles de profesor 
+       
         //AddProfesor
         Profesor AddProfesor(Profesor profesor);
         //UpdateProfesor
@@ -16,5 +19,7 @@ namespace COVID.App.Persistencia
         void DeleteProfesor(int idProfesor);
         //GetProfesor
         Profesor GetProfesor(int idProfesor);
+        //GetProfesor
+        IQueryable<Profesor> GetProfesorDetalle(int idProfesor);
     }
 }

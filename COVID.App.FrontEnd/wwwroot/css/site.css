@@ -186,3 +186,6 @@ body {
 .icon-youtube:before {
   content: "\ea9d";
 }
+.dropdown-toggle::after {
+  display:none;
+}
