@@ -3,25 +3,36 @@
 @{
 }
 <h1>Hoja de Detalles Profesor</h1>
-@foreach(var profesor in Model.Profesor)
-{
+
+
     <table class="table">
         <tr>
             <td><b>Nombre:</b></td>
-            <td>@profesor.nombre</td>
+            <td>@Model.profesor.nombre</td>
         </tr>
         <tr>
             <td><b>Apellidos:</b></td>
-            <td>@profesor.apellido</td>
+            <td>@Model.profesor.apellido</td>
         </tr>
         <tr>
             <td><b>Edad:</b></td>
-            <td>@profesor.edad</td>
+            <td>@Model.profesor.edad</td>
         </tr>
         <tr>
              <td><b>Estado COVID:</b></td>
-             <td>@profesor.estado</td>
-        </tr>  
+             <td>@Model.profesor.estado</td>
+        </tr> 
+        <tr>
+             <td><b>Departamento:</b></td>
+             <td>@Model.profesor.departamento</td>
+        </tr>
+        <tr>
+             <td><b>Asignatura:</b></td>
+             <td>@Model.profesor.asignatura</td>
+        </tr>   
     </table>
-     <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-}
+     <a class="btn btn-primary table-btn" asp-area="" asp-page="/Index">
+         <i class="fas fa-home"></i>
+
+     </a>
+     

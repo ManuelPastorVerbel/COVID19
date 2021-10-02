@@ -15,16 +15,30 @@
         @foreach(var profesor in Model.Profesores)
     {
         <tr>
+            <td>@profesor.id</td>
             <td>@profesor.nombre</td>
             <td>@profesor.apellido</td>
             
             <td>
-                <a class="btn btn-primary table-btn" asp-area="" asp-page="/Personas/Detalle" asp-route-idProfesor="@profesor.id">
+                <a class="btn btn-primary table-btn" asp-area="" asp-page="./Detalle" asp-route-idProfesor="@profesor.id">
                     <i class="fas fa-info-circle"></i>
-                    Detalle
+                    
+                </a>
+            </td>
+             <td>
+                <a class="btn btn-secondary table-btn" asp-area="" asp-page="./Editar" asp-route-idProfesor="@profesor.id">
+                    <i class="fas fa-pen-square"></i>
+                    
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-danger table-btn" asp-area="" asp-page="./Eliminar" asp-route-idProfesor="@profesor.id">
+                    <i class="fa fa-trash-alt"></i>
+                    
                 </a>
             </td>
             
         </tr>
     }
 </table>
+<a asp-page="./Editar" class="btn btn-primary">Adicionar Profesor </a>

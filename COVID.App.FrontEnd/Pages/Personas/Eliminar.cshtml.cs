@@ -7,28 +7,23 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using COVID.App.Persistencia;
 using COVID.App.Dominio;
 
-namespace COVID.App.FrontEnd.pages
+namespace COVID.App.FrontEnd.Pages
 {
-    public class DetalleModel : PageModel
+    public class EliminarModel : PageModel
     {
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
-
-        public Profesor profesor{get; set;}
+        [BindProperty]
+        public Profesor profesor{get;set;}
 
         public IActionResult OnGet(int idProfesor)
-    
         {
-          
-            profesor =_repoProfesor.GetProfesor(idProfesor);
-            
-            if(profesor==null)
-            {
-                return RedirectToPage("./List");
-            }else
-            return Page();        
+            profesor = _repoProfesor.GetProfesor(idProfesor);
+            return Page();
         }
-
-        
-        
+        public IActionResult OnPost()
+        {
+            _repoProfesor.DeleteProfesor(profesor.id);
+            return RedirectToPage("./List");
+        }
     }
 }
