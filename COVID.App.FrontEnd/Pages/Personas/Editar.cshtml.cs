@@ -13,6 +13,7 @@ namespace COVID.App.Frontend.Pages
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
         [BindProperty]
         public Profesor profesor{get;set;}
+        public Profesor profesorlista { get; set; }
 
         public IActionResult OnGet(int? idProfesor)
         {
@@ -40,7 +41,7 @@ namespace COVID.App.Frontend.Pages
                 {
                     if(profesor.id>0)
                     {
-                    profesor = _repoProfesor.UpdateProfesor(profesor);
+                    profesorlista = _repoProfesor.UpdateProfesor(profesor);
                     return RedirectToPage("./List");
                     }else
                     {
