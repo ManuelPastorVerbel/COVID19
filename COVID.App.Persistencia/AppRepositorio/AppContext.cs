@@ -5,7 +5,7 @@ namespace COVID.App.Persistencia
 {
     public class AppContext : DbContext
     {
-        public DbSet <Clase> Clases { get; set; }
+        //public DbSet <Clase> Clases { get; set; }
         public DbSet <Directivo> Directivos { get; set; }
        
         public DbSet <Estudiante> Estudiantes { get; set; }

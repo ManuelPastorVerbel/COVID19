@@ -41,6 +41,7 @@ namespace COVID.App.Frontend.Pages
                     if(profesor.id>0)
                     {
                     profesor = _repoProfesor.UpdateProfesor(profesor);
+                    return RedirectToPage("./List");
                     }else
                     {
                     _repoProfesor.AddProfesor(profesor);

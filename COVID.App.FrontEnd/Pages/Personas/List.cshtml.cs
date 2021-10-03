@@ -13,14 +13,18 @@ namespace COVID.App.FrontEnd.pages
     {
         private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
         
-        private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
+        
        
         public IEnumerable<Profesor> Profesores {get;set;}
         
+        
+        
         public void OnGet()
         {
+           
             Profesores = _repoProfesor.GetAllProfesores();
            
         }
+        
     }
 }

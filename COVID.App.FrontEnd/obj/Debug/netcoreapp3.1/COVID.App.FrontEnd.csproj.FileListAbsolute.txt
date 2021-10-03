@@ -82,3 +82,6 @@ C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pers
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Estudiantes.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Editar.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\Eliminar.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Estudiantes\ListaEstudiantes.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Estudiantes\DetalleEstudiante.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Estudiantes\EditarEstudiante.cshtml.g.cs
