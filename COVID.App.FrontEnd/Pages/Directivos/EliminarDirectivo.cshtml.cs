@@ -25,7 +25,7 @@ namespace COVID.App.FrontEnd.Pages
         }
         public IActionResult OnPost()
         {
-            _repoDirectivo.DeleteDirectivor(directivo.id);
+            _repoDirectivo.DeleteDirectivo(directivo.id);
             return RedirectToPage("./ListaDirectivo");
         }
    

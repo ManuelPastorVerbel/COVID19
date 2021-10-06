@@ -88,3 +88,8 @@ C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Estu
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Estudiantes\EliminarEstudiante.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Directivos\ListaDirectivo.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Directivos\EditarDirectivo.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Directivos\DetalleDirectivo.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Directivos\EliminarDirectivo.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\PersonalAseo\ListaPersonalAseo.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\PersonalAseo\DetallePersonalAseo.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\PersonalAseo\EditarPersonalAseo.cshtml.g.cs

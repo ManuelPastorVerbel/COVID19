@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using COVID.App.Persistencia;
+using COVID.App.Dominio;
 
 namespace COVID.App.FrontEnd.Pages
 {
@@ -21,7 +23,7 @@ namespace COVID.App.FrontEnd.Pages
         }
         public IActionResult OnPost()
         {
-            _repoProfesor.DeleteProfesor(estudiante.id);
+            _repoEstudiante.DeleteEstudiante(estudiante.id);
             return RedirectToPage("./ListaEstudiantes");
         }
    

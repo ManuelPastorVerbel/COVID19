@@ -6,9 +6,10 @@ namespace COVID.App.Persistencia
 {
     public interface  IRepositorioProfesor
     {
+        
          //GetAllProfesores
         
-        IEnumerable<Profesor> GetAllProfesores();
+        IQueryable<Profesor> GetAllProfesores();
         /// detalles de profesor 
        
         //AddProfesor
@@ -20,6 +21,6 @@ namespace COVID.App.Persistencia
         //GetProfesor
         Profesor GetProfesor(int idProfesor);
         //GetProfesor
-        IQueryable<Profesor> GetProfesorDetalle(int idProfesor);
+        
     }
 }

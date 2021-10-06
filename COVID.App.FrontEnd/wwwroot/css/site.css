@@ -189,3 +189,7 @@ body {
 .dropdown-toggle::after {
   display:none;
 }
+.carousel, .carousel-inner > .item > img {
+  height: 360px;
+  width: 640px;
+}

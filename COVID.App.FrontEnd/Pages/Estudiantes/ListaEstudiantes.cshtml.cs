@@ -12,8 +12,13 @@ namespace COVID.App.FrontEnd.Pages
     public class ListaEstudiantesModel : PageModel
     {
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
+         [BindProperty]
+         
         public IEnumerable<Estudiante> Estudiantes {get;set;}
         
+       
+
+
         public IActionResult OnGet()
         {
             Estudiantes = _repoEstudiante.GetAllEstudiantes();

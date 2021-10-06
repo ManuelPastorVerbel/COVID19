@@ -12,6 +12,7 @@ namespace COVID.App.FrontEnd.Pages
     public class ListaDirectivoModel : PageModel
     {
         private static IRepositorioDirectivo _repoDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
+         [BindProperty]
         public IEnumerable<Directivo> Directivos {get;set;}
         
         public IActionResult OnGet()

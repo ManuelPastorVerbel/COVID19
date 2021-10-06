@@ -7,7 +7,7 @@ namespace COVID.App.Persistencia
 {
     public class RepositorioEstudiante : IRepositorioEstudiante
     {
-         private readonly AppContext  _appContext;
+        private static AppContext  _appContext;
 
         public RepositorioEstudiante(AppContext appContext)
         {

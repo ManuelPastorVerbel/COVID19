@@ -7,8 +7,8 @@ namespace COVID.App.Persistencia
     public class RepositorioProfesor : IRepositorioProfesor
     {
         
-        private readonly AppContext _appContext;
-
+        private static AppContext _appContext;
+        
         public RepositorioProfesor(AppContext appContext)
         {
             _appContext = appContext;
@@ -60,16 +60,14 @@ namespace COVID.App.Persistencia
             return profesorEncontrado;
         }
 
-        IEnumerable<Profesor> IRepositorioProfesor.GetAllProfesores()
+       IQueryable <Profesor> IRepositorioProfesor.GetAllProfesores()
         {
-            return _appContext.Profesores;
+            
+            
+           return  _appContext.Profesores;
+           
         }
-         IQueryable<Profesor> IRepositorioProfesor.GetProfesorDetalle(int idProfesor)
-        {
-            IQueryable<Profesor> profesores = _appContext.Profesores.Where(p => p.id == idProfesor);
-            var profesorEncontrado= profesores;
-            return profesorEncontrado;
-        }
+        
        
     }
 }

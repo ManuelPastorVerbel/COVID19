@@ -7,7 +7,7 @@ namespace COVID.App.Persistencia
     public class RepositorioSede : IRepositorioSede
     {
         
-        private readonly AppContext _appContext;
+        private static AppContext _appContext;
 
         public RepositorioSede(AppContext appContext)
         {
