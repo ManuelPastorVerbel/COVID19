@@ -7,8 +7,7 @@ namespace COVID.App.Dominio
     { 
     public int id { get; set; }
    
-    public Profesor profesor { get; set; }
-    public Curso curso { get; set; }
+    
     }
 
 }

@@ -6,6 +6,8 @@ namespace COVID.App.Dominio
     public class Curso
     {
        public int id { get; set; }
+       
+
        public string nombre { get; set; }
        public int cantidad_inscritos { get; set; }
        public string Dia { get; set; }

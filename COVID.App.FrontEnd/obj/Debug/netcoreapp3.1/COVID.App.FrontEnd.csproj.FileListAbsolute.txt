@@ -94,3 +94,5 @@ C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Pers
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\PersonalAseo\DetallePersonalAseo.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\PersonalAseo\EditarPersonalAseo.cshtml.g.cs
 C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\PersonalAseo\EliminarPersonalAseo.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\BuscarPersona.cshtml.g.cs
+C:\COVID19\COVID.App\COVID.App.FrontEnd\obj\Debug\netcoreapp3.1\Razor\Pages\Personas\DetallePersona.cshtml.g.cs

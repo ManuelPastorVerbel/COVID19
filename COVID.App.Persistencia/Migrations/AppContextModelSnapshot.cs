@@ -19,41 +19,55 @@ namespace COVID.App.Persistencia.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("COVID.App.Dominio.Clase", b =>
+            modelBuilder.Entity("COVID.App.Dominio.CursoEstudiante", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("Dia")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("DuracionClase")
-                        .HasColumnType("int");
-
-                    b.Property<int>("cantidad_inscritos")
-                        .HasColumnType("int");
-
-                    b.Property<string>("hora")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("profesorid")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("salonid")
+                    b.Property<int?>("Estudianteid")
                         .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.HasIndex("profesorid");
+                    b.HasIndex("Estudianteid");
 
-                    b.HasIndex("salonid");
+                    b.ToTable("CursoEstudiantes");
+                });
 
-                    b.ToTable("Clases");
+            modelBuilder.Entity("COVID.App.Dominio.CursoProfesor", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("Profesorid")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Profesorid");
+
+                    b.ToTable("CursoProfesores");
+                });
+
+            modelBuilder.Entity("COVID.App.Dominio.CursoSalon", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("Salonid")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Salonid");
+
+                    b.ToTable("CursoSalones");
                 });
 
             modelBuilder.Entity("COVID.App.Dominio.HistoriaClinica", b =>
@@ -69,12 +83,7 @@ namespace COVID.App.Persistencia.Migrations
                     b.Property<DateTime>("fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("personaid")
-                        .HasColumnType("int");
-
                     b.HasKey("id");
-
-                    b.HasIndex("personaid");
 
                     b.ToTable("HistoriaClinicas");
                 });
@@ -99,10 +108,16 @@ namespace COVID.App.Persistencia.Migrations
                     b.Property<int>("estado")
                         .HasColumnType("int");
 
+                    b.Property<int?>("historiaclinicaid")
+                        .HasColumnType("int");
+
                     b.Property<string>("nombre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
+
+                    b.HasIndex("historiaclinicaid");
 
                     b.ToTable("Personas");
 
@@ -116,13 +131,13 @@ namespace COVID.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("Sedeid")
+                        .HasColumnType("int");
+
                     b.Property<int>("aforo")
                         .HasColumnType("int");
 
                     b.Property<int>("numerosalon")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("sedeid")
                         .HasColumnType("int");
 
                     b.Property<string>("unidad")
@@ -130,7 +145,7 @@ namespace COVID.App.Persistencia.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("sedeid");
+                    b.HasIndex("Sedeid");
 
                     b.ToTable("Salones");
                 });
@@ -167,16 +182,11 @@ namespace COVID.App.Persistencia.Migrations
                 {
                     b.HasBaseType("COVID.App.Dominio.Persona");
 
-                    b.Property<int?>("Claseid")
-                        .HasColumnType("int");
-
                     b.Property<string>("carrera")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("semestre")
                         .HasColumnType("int");
-
-                    b.HasIndex("Claseid");
 
                     b.HasDiscriminator().HasValue("Estudiante");
                 });
@@ -204,49 +214,61 @@ namespace COVID.App.Persistencia.Migrations
                     b.HasDiscriminator().HasValue("Profesor");
                 });
 
-            modelBuilder.Entity("COVID.App.Dominio.Clase", b =>
+            modelBuilder.Entity("COVID.App.Dominio.CursoEstudiante", b =>
                 {
-                    b.HasOne("COVID.App.Dominio.Profesor", "profesor")
-                        .WithMany()
-                        .HasForeignKey("profesorid");
-
-                    b.HasOne("COVID.App.Dominio.Salon", "salon")
-                        .WithMany()
-                        .HasForeignKey("salonid");
-
-                    b.Navigation("profesor");
-
-                    b.Navigation("salon");
+                    b.HasOne("COVID.App.Dominio.Estudiante", null)
+                        .WithMany("cursoestudiante")
+                        .HasForeignKey("Estudianteid");
                 });
 
-            modelBuilder.Entity("COVID.App.Dominio.HistoriaClinica", b =>
+            modelBuilder.Entity("COVID.App.Dominio.CursoProfesor", b =>
                 {
-                    b.HasOne("COVID.App.Dominio.Persona", "persona")
-                        .WithMany()
-                        .HasForeignKey("personaid");
+                    b.HasOne("COVID.App.Dominio.Profesor", null)
+                        .WithMany("cursoprofesor")
+                        .HasForeignKey("Profesorid");
+                });
 
-                    b.Navigation("persona");
+            modelBuilder.Entity("COVID.App.Dominio.CursoSalon", b =>
+                {
+                    b.HasOne("COVID.App.Dominio.Salon", null)
+                        .WithMany("cursosalon")
+                        .HasForeignKey("Salonid");
+                });
+
+            modelBuilder.Entity("COVID.App.Dominio.Persona", b =>
+                {
+                    b.HasOne("COVID.App.Dominio.HistoriaClinica", "historiaclinica")
+                        .WithMany()
+                        .HasForeignKey("historiaclinicaid");
+
+                    b.Navigation("historiaclinica");
                 });
 
             modelBuilder.Entity("COVID.App.Dominio.Salon", b =>
                 {
-                    b.HasOne("COVID.App.Dominio.Sede", "sede")
-                        .WithMany()
-                        .HasForeignKey("sedeid");
+                    b.HasOne("COVID.App.Dominio.Sede", null)
+                        .WithMany("salones")
+                        .HasForeignKey("Sedeid");
+                });
 
-                    b.Navigation("sede");
+            modelBuilder.Entity("COVID.App.Dominio.Salon", b =>
+                {
+                    b.Navigation("cursosalon");
+                });
+
+            modelBuilder.Entity("COVID.App.Dominio.Sede", b =>
+                {
+                    b.Navigation("salones");
                 });
 
             modelBuilder.Entity("COVID.App.Dominio.Estudiante", b =>
                 {
-                    b.HasOne("COVID.App.Dominio.Clase", null)
-                        .WithMany("estudiante")
-                        .HasForeignKey("Claseid");
+                    b.Navigation("cursoestudiante");
                 });
 
-            modelBuilder.Entity("COVID.App.Dominio.Clase", b =>
+            modelBuilder.Entity("COVID.App.Dominio.Profesor", b =>
                 {
-                    b.Navigation("estudiante");
+                    b.Navigation("cursoprofesor");
                 });
 #pragma warning restore 612, 618
         }

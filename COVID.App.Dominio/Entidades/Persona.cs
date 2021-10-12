@@ -14,6 +14,8 @@ namespace COVID.App.Dominio
         public int edad { get; set; }
 
         public Estado estado { get; set; }
+         
+        public HistoriaClinica historiaclinica { get; set; }
         
 
         

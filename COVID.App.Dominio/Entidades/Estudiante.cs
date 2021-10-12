@@ -6,6 +6,7 @@ namespace COVID.App.Dominio
     {
         public string carrera { get; set; }
         public int semestre { get; set;}
+        public System.Collections.Generic.List<CursoEstudiante> cursoestudiante { get; set; }
         
     }
 }

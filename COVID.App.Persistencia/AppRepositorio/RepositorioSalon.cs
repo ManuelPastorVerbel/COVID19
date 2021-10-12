@@ -30,7 +30,7 @@ namespace COVID.App.Persistencia
             {
                 salonEncontrado.aforo = salon.aforo;
                 salonEncontrado.numerosalon = salon.numerosalon;
-                salonEncontrado.sede= salon.sede;
+            
                 salonEncontrado.unidad = salon.unidad;
 
                 _appContext.SaveChanges();

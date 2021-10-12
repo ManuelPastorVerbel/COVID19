@@ -15,6 +15,10 @@ namespace COVID.App.Persistencia
         public DbSet <Profesor> Profesores { get; set; }
         public DbSet <Salon> Salones { get; set; }
         public DbSet <Sede> Sedes { get; set; }
+        public DbSet <CursoEstudiante> CursoEstudiantes { get; set; }
+        public DbSet<CursoProfesor> CursoProfesores { get; set; }
+        public DbSet<CursoSalon> CursoSalones { get; set; }
+
        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
